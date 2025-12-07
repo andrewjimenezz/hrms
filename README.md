@@ -1,2 +1,3 @@
 # hrms
 plsp hrms
+![584352412_2382331108871400_8856454550517076220_n](https://github.com/user-attachments/assets/1e2f6e43-7971-4a74-8f03-925f709344e3)
