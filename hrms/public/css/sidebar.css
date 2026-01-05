@@ -1,0 +1,112 @@
+/* BASE SIDEBAR */
+.sidebar {
+  width: 280px;
+  background: linear-gradient(to bottom, #0a4f0d, #3aa23f);
+  color: white;
+  padding: 20px;
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+  transition: width 0.3s ease, transform 0.3s ease;
+}
+
+/* SIDEBAR HEADER */
+.sidebar-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* LOGO */
+.sidebar-logo {
+  width: 160px;        /* controls size */
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* ICONS */
+.sidebar i {
+  width: 22px;
+  text-align: center;
+  font-size: 1.2em;
+  color: white;
+}
+
+/* LINKS */
+.sidebar a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 15px;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* TITLE */
+.sidebar-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* LOGOUT */
+.sidebar .logout {
+  margin-top: auto;
+  background: rgba(255, 0, 0, 0.3);
+}
+
+/* TOGGLE BUTTON */
+.toggle-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.4em;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+/* COLLAPSED MODE (DESKTOP) */
+.sidebar.collapsed {
+  width: 80px;
+}
+
+.sidebar.collapsed .sidebar-title,
+.sidebar.collapsed a span {
+  display: none;
+}
+
+.sidebar.collapsed a {
+  justify-content: center;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    z-index: 1000;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+}
+
+/* COLLAPSED SIDEBAR LOGO */
+.sidebar.collapsed .sidebar-logo {
+  width: 40px;
+  margin-bottom: 0;
+}
+
+.sidebar.collapsed .sidebar-title {
+  display: none;
+}
+
